@@ -6,7 +6,14 @@
   font-family: "Raleway";
 }
 
-.bg {
+#corpo {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+#corpo .bg {
   position: absolute;
   top: 0;
   left: 0;
@@ -17,7 +24,7 @@
   background-position: top left;
   z-index: -2;
 }
-.bg::after {
+#corpo .bg::after {
   position: absolute;
   top: 0;
   left: 0;
@@ -26,53 +33,45 @@
   background-color: rgba(197, 197, 197, 0.8392156863);
   content: "";
 }
-
-.container {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.card {
+#corpo .card {
   box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.25);
   border: none !important;
 }
-.card h3 {
+#corpo .card h3 {
   color: #FF6F61;
   font-weight: 600;
 }
-.card .card-header {
+#corpo .card .card-header {
   background-color: #FF6F61;
 }
-.card .card-body {
+#corpo .card .card-body {
   padding: 2.5rem 4rem;
 }
-.card .card-body img {
+#corpo .card .card-body img {
   width: 8vw;
   min-width: 5.5rem;
 }
-.card .card-body form .input-group-text {
+#corpo .card .card-body form .input-group-text {
   background-color: #FF6F61;
   border-color: rgba(112, 112, 112, 0.3490196078);
 }
-.card .card-body form .input-group-text * {
+#corpo .card .card-body form .input-group-text * {
   color: #FFF;
 }
-.card .card-body form .form-control {
+#corpo .card .card-body form .form-control {
   border-color: rgba(112, 112, 112, 0.3490196078);
   padding-block: 0.5rem;
   color: #707070;
 }
-.card .card-body form .form-control:focus {
+#corpo .card .card-body form .form-control:focus {
   box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.25);
 }
-.card .card-body form a {
+#corpo .card .card-body form a {
   text-decoration: none;
   color: #707070;
   font-size: 0.9rem;
 }
-.card .card-body form .btn {
+#corpo .card .card-body form .btn {
   border: 1px solid #FF6F61;
   color: #FF6F61;
   font-weight: 800;
@@ -80,7 +79,7 @@
   padding: 0.3rem 2.3rem;
   transition: all 0.5s ease-in-out;
 }
-.card .card-body form .btn:hover {
+#corpo .card .card-body form .btn:hover {
   background-color: #FF6F61;
   color: #FFF;
 }/*# sourceMappingURL=style.css.map */
