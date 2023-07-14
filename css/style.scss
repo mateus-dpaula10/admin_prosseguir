@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway';
+}
+
+$rosa_principal: #FF6F61;
+$cinza_principal: #707070;
+$cinza_secundario: #808080;
+
+.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;    
+    background-image: url('/img/bg.jpg');
+    background-size: cover;
+    background-position: top left;
+    z-index: -2;
+
+    &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #c5c5c5d6;
+        content: '';
+    }
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card {    
+    box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.25);
+    border: none!important;
+
+    h3 {
+        color: $rosa_principal;
+        font-weight: 600;
+    }
+
+    .card-header {
+        background-color: $rosa_principal;        
+    }
+
+    .card-body {
+        padding: 2.5rem 4rem;
+
+        img {
+            width: 8vw;
+            min-width: 5.5rem;
+        }
+
+        form {
+            .input-group-text {
+                background-color: $rosa_principal;
+                border-color: rgba(112, 112, 112, 0.3490196078);
+                
+                * {
+                    color: #FFF;
+                }
+            }
+
+            .form-control {
+                border-color: #70707059; 
+                padding-block: .5rem;
+                color: $cinza_principal;
+
+                &:focus {
+                    box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.25);
+                }
+            }
+
+            a {
+                text-decoration: none;
+                color: $cinza_principal;
+                font-size: .9rem;
+            }
+
+            .btn {
+                border: 1px solid $rosa_principal;
+                color: $rosa_principal;
+                font-weight: 800;
+                border-radius: 2rem;
+                padding: .3rem 2.3rem;
+                transition: all .5s ease-in-out;
+
+                &:hover {
+                    background-color: $rosa_principal;
+                    color: #FFF;
+                }
+            }
+        }        
+    }
+}
